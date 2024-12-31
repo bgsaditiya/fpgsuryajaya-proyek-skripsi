@@ -1,0 +1,54 @@
+.fp_tree ul {
+    margin-left: 0px;
+}
+
+.fp_tree li {
+    list-style-type: none;
+    margin: 5px;
+    position: relative;
+}
+
+.fp_tree li::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -20px;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0 0 0 0;
+    width: 20px;
+    height: 14px;
+}
+
+.fp_tree li::after {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: -20px;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-radius: 0 0 0 0;
+    width: 20px;
+    height: 100%;
+}
+
+.fp_tree li:last-child::after {
+    display: none;
+}
+
+.fp_tree li:last-child:before {
+    border-radius: 0 0 0 5px;
+}
+
+ul.fp_tree > li:first-child::before {
+    display: none;
+}
+
+.fp_tree b {
+    min-width: 50px;
+}
+
+.fp_tree #item {
+    background-color: #373193;
+    color: #ffff;
+}
